@@ -8,6 +8,8 @@ interface PageProps {
   params: { topic: string };
 }
 
+// export const revalidate = 0;
+
 export function generateMetadata({ params: { topic } }: PageProps): Metadata {
   return {
     title: topic + " - NextJS 13.4 Image Gallery",
