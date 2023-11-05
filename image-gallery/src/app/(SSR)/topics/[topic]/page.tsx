@@ -26,7 +26,6 @@ const Page = async ({ params: { topic } }: PageProps) => {
   );
 
   const images: UnsplashImage[] = await resp.json();
-  // console.log("images", images);
 
   return (
     <>
