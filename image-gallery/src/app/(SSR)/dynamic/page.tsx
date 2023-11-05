@@ -10,9 +10,8 @@ export const metadata = {
 // export const revalidate=0;
 
 export default async function Page() {
-    const response = await fetch("https://api.unsplash.com/photos/random?client_id=" + process.env.ACCESS_KEY,
+    const response = await fetch("https://api.unsplash.com/photos/random?client_id=" + process.env.NEXT_PUBLIC_ACCESS_KEY,
     {
-        // cache:'no-cache'
         next:{revalidate:0}
     });
     const image: UnsplashImage = await response.json();

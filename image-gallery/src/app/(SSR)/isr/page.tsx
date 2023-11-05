@@ -7,13 +7,10 @@ export const metadata = {
     title: "Incrimental Static Rgeneration - NextJS Image Gallery",
 }
 
-// export const revalidate=0;
-
 export default async function Page() {
-    const response = await fetch("https://api.unsplash.com/photos/random?client_id=" + process.env.ACCESS_KEY,
+    const response = await fetch("https://api.unsplash.com/photos/random?client_id=" + process.env.NEXT_PUBLIC_ACCESS_KEY,
     {
-        // cache:'no-cache'
-        next:{revalidate:15}
+        next:{revalidate:10}
     });
     const image: UnsplashImage = await response.json();
 

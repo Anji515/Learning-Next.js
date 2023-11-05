@@ -22,7 +22,7 @@ export function generateStaticParams() {
 
 const Page = async ({ params: { topic } }: PageProps) => {
   const resp = await fetch(
-    `https://api.unsplash.com/photos/random?query=${topic}&count=30&client_id=${process.env.ACCESS_KEY}`
+    `https://api.unsplash.com/photos/random?query=${topic}&count=30&client_id=${process.env.NEXT_PUBLIC_ACCESS_KEY}`
   );
 
   const images: UnsplashImage[] = await resp.json();
